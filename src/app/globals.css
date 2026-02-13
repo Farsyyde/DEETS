@@ -1,0 +1,118 @@
+@import "tailwindcss";
+
+/*
+  DEETS Brand Color System
+  ========================
+  Foundation: Warm graphite (not pure black — slightly warm undertone)
+  Primary: Royal indigo #4F46E5 (deep, rich, slightly warm — not neon, not corporate navy)
+  Accent: Soft warm white text on dark
+
+  Ratios: ~70% graphite surfaces, ~20% secondary/muted fills, ~10% indigo accent
+
+  The indigo is used sparingly but consistently: buttons, active states,
+  progress bars, trust badges, lock indicators. Recognizable from color alone.
+*/
+
+@theme {
+  /* Warm graphite foundation */
+  --color-background: #111114;
+  --color-foreground: #EDEDEF;
+  --color-card: #18181C;
+  --color-card-foreground: #EDEDEF;
+  --color-popover: #18181C;
+  --color-popover-foreground: #EDEDEF;
+
+  /* Royal indigo — the DEETS signature */
+  --color-primary: #4F46E5;
+  --color-primary-foreground: #FFFFFF;
+  --color-accent: #4F46E5;
+  --color-accent-foreground: #FFFFFF;
+  --color-ring: #4F46E5;
+
+  /* Warm secondary surfaces */
+  --color-secondary: #1E1E24;
+  --color-secondary-foreground: #EDEDEF;
+  --color-muted: #1A1A1F;
+  --color-muted-foreground: #9CA3AF;
+
+  /* Functional */
+  --color-destructive: #DC2626;
+  --color-destructive-foreground: #FFFFFF;
+  --color-border: #2A2A30;
+  --color-input: #2A2A30;
+
+  /* Wallet categories */
+  --color-gtd: #22C55E;
+  --color-wl: #4F46E5;
+  --color-og: #E5A046;
+  --color-team: #3B82F6;
+  --color-fcfs: #D946A8;
+
+  /* Chain colors (industry standard) */
+  --color-ethereum: #627EEA;
+  --color-solana: #9945FF;
+  --color-bitcoin: #F7931A;
+  --color-polygon: #8247E5;
+  --color-base: #0052FF;
+
+  /* Trust states */
+  --color-locked: #22C55E;
+  --color-unlocked: #9CA3AF;
+
+  --radius-lg: 0.75rem;
+  --radius-md: 0.5rem;
+  --radius-sm: 0.375rem;
+}
+
+* {
+  border-color: var(--color-border);
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* Custom scrollbar — warm graphite */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #2A2A30;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3A3A42;
+}
+
+/* Subtle glow for trust cards — indigo accent */
+.glow-card {
+  position: relative;
+  overflow: hidden;
+}
+.glow-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(79, 70, 229, 0.25), transparent, rgba(79, 70, 229, 0.08));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+/* Lock status indicator pulse */
+.lock-pulse {
+  animation: lockPulse 2s ease-in-out infinite;
+}
+@keyframes lockPulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
