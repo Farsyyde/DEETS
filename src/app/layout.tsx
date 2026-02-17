@@ -2,8 +2,12 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "DEETS - NFT Whitelist & Collaboration Platform",
-  description: "Manage your NFT project whitelists, collaborations, and applications in one place.",
+  title: "DEETS — Launch Infrastructure",
+  description: "Everything your launch needs in one place. Structured whitelist management, verifiable process, and community trust.",
+  icons: {
+    icon: "/DEETS_logo.png",
+    apple: "/DEETS_logo.png",
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

@@ -3,7 +3,8 @@
 import { useState, useEffect } from "react";
 import { useParams } from "next/navigation";
 import Link from "next/link";
-import { Shield, Search, CheckCircle2, XCircle, Loader2, ArrowLeft, Lock } from "lucide-react";
+import Image from "next/image";
+import { Search, CheckCircle2, XCircle, Loader2, ArrowLeft, Lock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
@@ -80,9 +81,8 @@ export default function CheckPage() {
     <div className="min-h-screen">
       <nav className="border-b bg-card/50 backdrop-blur-xl">
         <div className="mx-auto flex h-14 max-w-4xl items-center justify-between px-6">
-          <Link href="/" className="flex items-center gap-2">
-            <Shield className="h-5 w-5 text-primary" />
-            <span className="font-bold">DEETS</span>
+          <Link href="/">
+            <Image src="/DEETS_logo.png" alt="DEETS" width={100} height={34} className="h-6 w-auto" />
           </Link>
           <Link href={`/p/${slug}`}>
             <Button variant="ghost" size="sm" className="gap-2">

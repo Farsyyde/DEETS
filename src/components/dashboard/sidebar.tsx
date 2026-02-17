@@ -2,8 +2,8 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 import {
-  Shield,
   LayoutDashboard,
   Wallet,
   Handshake,
@@ -41,9 +41,8 @@ export function Sidebar({ projects, currentProjectId, onSignOut }: SidebarProps)
   return (
     <aside className="flex h-screen w-64 flex-col border-r bg-card/50">
       {/* Logo */}
-      <div className="flex h-16 items-center gap-2 border-b px-6">
-        <Shield className="h-6 w-6 text-primary" />
-        <span className="text-lg font-bold tracking-tight">DEETS</span>
+      <div className="flex h-16 items-center border-b px-6">
+        <Image src="/DEETS_logo.png" alt="DEETS" width={110} height={36} className="h-7 w-auto" />
       </div>
 
       {/* Project Switcher */}

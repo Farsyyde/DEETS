@@ -3,7 +3,8 @@
 import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { Shield, Loader2 } from "lucide-react";
+import Image from "next/image";
+import { Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -54,9 +55,8 @@ export default function RegisterPage() {
       </div>
       <Card className="relative w-full max-w-md">
         <CardHeader className="text-center">
-          <Link href="/" className="mx-auto mb-4 flex items-center gap-2">
-            <Shield className="h-8 w-8 text-primary" />
-            <span className="text-2xl font-bold">DEETS</span>
+          <Link href="/" className="mx-auto mb-4 block">
+            <Image src="/DEETS_logo.png" alt="DEETS" width={150} height={50} className="mx-auto h-10 w-auto" />
           </Link>
           <CardTitle className="text-xl">Create your account</CardTitle>
           <CardDescription>Your operator account is one step away</CardDescription>

@@ -1,6 +1,6 @@
 import Link from "next/link";
+import Image from "next/image";
 import {
-  Shield,
   ArrowRight,
   Lock,
   ScrollText,
@@ -43,10 +43,7 @@ export default function LandingPage() {
       {/* Nav */}
       <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-xl">
         <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
-          <div className="flex items-center gap-2">
-            <Shield className="h-7 w-7 text-primary" />
-            <span className="text-xl font-bold tracking-tight">DEETS</span>
-          </div>
+          <Image src="/DEETS_logo.png" alt="DEETS" width={120} height={40} className="h-8 w-auto" />
           <div className="flex items-center gap-3">
             <Link href="/login">
               <Button variant="ghost" size="sm">Log In</Button>
@@ -69,8 +66,8 @@ export default function LandingPage() {
             Trust infrastructure for launches
           </div>
           <h1 className="text-5xl font-bold tracking-tight sm:text-6xl lg:text-7xl">
-            Launch infrastructure
-            <br />for <span className="text-primary">serious projects</span>
+            Everything your launch
+            <br />needs in <span className="text-primary">one place</span>
           </h1>
           <p className="mt-6 text-lg text-muted-foreground max-w-2xl mx-auto">
             Structured whitelist management. Verifiable process. Community trust.
@@ -163,7 +160,7 @@ export default function LandingPage() {
       <section className="py-20 px-6">
         <div className="mx-auto max-w-3xl text-center">
           <div className="rounded-2xl border bg-card p-12">
-            <Shield className="mx-auto mb-6 h-12 w-12 text-primary" />
+            <Image src="/DEETS_logo.png" alt="DEETS" width={180} height={60} className="mx-auto mb-6 h-12 w-auto" />
             <h2 className="text-3xl font-bold tracking-tight">
               Your launch deserves better than a spreadsheet.
             </h2>
@@ -182,10 +179,7 @@ export default function LandingPage() {
       {/* Footer */}
       <footer className="border-t py-8 px-6">
         <div className="mx-auto max-w-7xl flex items-center justify-between text-sm text-muted-foreground">
-          <div className="flex items-center gap-2">
-            <Shield className="h-4 w-4 text-primary" />
-            <span>DEETS</span>
-          </div>
+          <Image src="/DEETS_logo.png" alt="DEETS" width={80} height={28} className="h-5 w-auto" />
           <p>Trust infrastructure for digital asset launches</p>
         </div>
       </footer>
