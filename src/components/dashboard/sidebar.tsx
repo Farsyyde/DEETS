@@ -42,7 +42,7 @@ export function Sidebar({ projects, currentProjectId, onSignOut }: SidebarProps)
     <aside className="flex h-screen w-64 flex-col border-r bg-card/50">
       {/* Logo */}
       <div className="flex h-16 items-center border-b px-6">
-        <Image src="/DEETS_logo.png" alt="DEETS" width={110} height={36} className="h-7 w-auto" />
+        <Image src="/deets_logo2.png" alt="DEETS" width={110} height={36} className="h-7 w-auto" />
       </div>
 
       {/* Project Switcher */}

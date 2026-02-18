@@ -82,7 +82,7 @@ export default function CheckPage() {
       <nav className="border-b bg-card/50 backdrop-blur-xl">
         <div className="mx-auto flex h-14 max-w-4xl items-center justify-between px-6">
           <Link href="/">
-            <Image src="/DEETS_logo.png" alt="DEETS" width={100} height={34} className="h-6 w-auto" />
+            <Image src="/deets_logo2.png" alt="DEETS" width={100} height={34} className="h-6 w-auto" />
           </Link>
           <Link href={`/p/${slug}`}>
             <Button variant="ghost" size="sm" className="gap-2">
