@@ -13,6 +13,7 @@ import {
   Plus,
   ChevronDown,
   LogOut,
+  Home,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import type { Project } from "@/types/database";
@@ -41,8 +42,10 @@ export function Sidebar({ projects, currentProjectId, onSignOut }: SidebarProps)
   return (
     <aside className="flex h-screen w-64 flex-col border-r bg-card/50">
       {/* Logo */}
-      <div className="flex h-16 items-center border-b px-6">
-        <Image src="/deets_logo2.png" alt="DEETS" width={200} height={66} className="h-14 w-auto" />
+      <div className="flex h-20 items-center border-b px-6">
+        <Link href="/dashboard">
+          <Image src="/deets_logo2.png" alt="DEETS" width={200} height={66} className="h-14 w-auto" />
+        </Link>
       </div>
 
       {/* Project Switcher */}
@@ -126,8 +129,15 @@ export function Sidebar({ projects, currentProjectId, onSignOut }: SidebarProps)
         )}
       </nav>
 
-      {/* Sign Out */}
-      <div className="border-t p-3">
+      {/* Footer */}
+      <div className="border-t p-3 space-y-1">
+        <Link
+          href="/"
+          className="flex w-full items-center gap-3 rounded-lg px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
+        >
+          <Home className="h-4 w-4" />
+          Home
+        </Link>
         <button
           onClick={onSignOut}
           className="flex w-full items-center gap-3 rounded-lg px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
