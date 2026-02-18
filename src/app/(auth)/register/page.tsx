@@ -56,7 +56,7 @@ export default function RegisterPage() {
       <Card className="relative w-full max-w-md">
         <CardHeader className="text-center">
           <Link href="/" className="mx-auto mb-4 block">
-            <Image src="/deets_logo2.png" alt="DEETS" width={150} height={50} className="mx-auto h-10 w-auto" />
+            <Image src="/deets_logo2.png" alt="DEETS" width={280} height={92} className="mx-auto h-20 w-auto" />
           </Link>
           <CardTitle className="text-xl">Create your account</CardTitle>
           <CardDescription>Your operator account is one step away</CardDescription>

@@ -43,7 +43,7 @@ export default function LandingPage() {
       {/* Nav */}
       <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-xl">
         <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
-          <Image src="/deets_logo2.png" alt="DEETS" width={180} height={60} className="h-12 w-auto" />
+          <Image src="/deets_logo2.png" alt="DEETS" width={280} height={90} className="h-20 w-auto" />
           <div className="flex items-center gap-3">
             <Link href="/login">
               <Button variant="ghost" size="sm">Log In</Button>
@@ -160,7 +160,7 @@ export default function LandingPage() {
       <section className="py-20 px-6">
         <div className="mx-auto max-w-3xl text-center">
           <div className="rounded-2xl border bg-card p-12">
-            <Image src="/deets_logo2.png" alt="DEETS" width={240} height={80} className="mx-auto mb-6 h-16 w-auto" />
+            <Image src="/deets_logo2.png" alt="DEETS" width={360} height={120} className="mx-auto mb-6 h-24 w-auto" />
             <h2 className="text-3xl font-bold tracking-tight">
               Your launch deserves better than a spreadsheet.
             </h2>
@@ -179,7 +179,7 @@ export default function LandingPage() {
       {/* Footer */}
       <footer className="border-t py-8 px-6">
         <div className="mx-auto max-w-7xl flex items-center justify-between text-sm text-muted-foreground">
-          <Image src="/deets_logo2.png" alt="DEETS" width={120} height={40} className="h-8 w-auto" />
+          <Image src="/deets_logo2.png" alt="DEETS" width={200} height={66} className="h-14 w-auto" />
           <p>Trust infrastructure for digital asset launches</p>
         </div>
       </footer>
