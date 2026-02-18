@@ -5,8 +5,8 @@ export const metadata: Metadata = {
   title: "DEETS — Launch Infrastructure",
   description: "Everything your launch needs in one place. Structured whitelist management, verifiable process, and community trust.",
   icons: {
-    icon: "/DEETS_logo.png",
-    apple: "/DEETS_logo.png",
+    icon: "/Deets_fav.png",
+    apple: "/Deets_fav.png",
   },
 };
 
